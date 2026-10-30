@@ -1,27 +1,326 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="AM Scientific Calculator by Alex Meja">
+    <meta name="description" content="AM Scientific Calculator by Alex Meja. Calculate, solve and understand scientific problems.">
 
-    <title>AM Scientific Calculator</title>
+    <meta name="theme-color" content="#10151f">
+
+    <title>AM Scientific Calculator | Alex Meja</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <h1>AM Scientific Calculator</h1>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="brand">
+            <div class="brand-logo">AM</div>
+            <div>
+                <h2>AM Scientific</h2>
+                <small>BY ALEX MEJA</small>
+            </div>
+        </div>
 
-    <p>By Alex Meja</p>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+            ☰
+        </button>
 
-    <p>
-        Calculate. Solve. Understand. Learn.
-    </p>
+        <nav class="navigation" id="navigation">
+            <a href="#home" class="active">Home</a>
+            <a href="#calculator">Calculator</a>
+            <a href="#ai-solver">AI Solver</a>
+            <a href="#subjects">Subjects</a>
+            <a href="#tools">Tools</a>
+        </nav>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <span class="tag">YOUR SMART SCIENTIFIC COMPANION</span>
+
+                <h1>
+                    Calculate.<br>
+                    <span>Solve. Understand.</span>
+                </h1>
+
+                <p>
+                    An intelligent scientific calculator designed
+                    to help students solve mathematical, physics,
+                    chemistry and other scientific problems.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#calculator" class="primary-btn">
+                        Open Calculator
+                    </a>
+
+                    <a href="#ai-solver" class="secondary-btn">
+                        Ask AI
+                    </a>
+                </div>
+
+                <div class="creator">
+                    Developed by <strong>Alex Meja</strong>
+                </div>
+
+            </div>
+
+            <div class="hero-symbol">
+                <div class="symbol-card">
+                    <span>∫</span>
+                    <span>√x</span>
+                    <span>π</span>
+                    <span>Σ</span>
+                    <span>∞</span>
+                    <span>θ</span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACCESS -->
+        <section class="quick-section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="tag">GET STARTED</span>
+                    <h2>What do you want to do?</h2>
+                </div>
+            </div>
+
+            <div class="quick-grid">
+
+                <a href="#calculator" class="quick-card">
+                    <div class="card-icon">⌗</div>
+                    <h3>Scientific Calculator</h3>
+                    <p>Perform advanced mathematical calculations.</p>
+                    <span>Open Calculator →</span>
+                </a>
+
+                <a href="#ai-solver" class="quick-card">
+                    <div class="card-icon">✦</div>
+                    <h3>AI Problem Solver</h3>
+                    <p>Get step-by-step explanations to questions.</p>
+                    <span>Solve with AI →</span>
+                </a>
+
+                <a href="#ai-solver" class="quick-card">
+                    <div class="card-icon">▧</div>
+                    <h3>Scan a Question</h3>
+                    <p>Upload photographs and PDF questions.</p>
+                    <span>Upload Question →</span>
+                </a>
+
+                <a href="#tools" class="quick-card">
+                    <div class="card-icon">⌁</div>
+                    <h3>Graphing Calculator</h3>
+                    <p>Explore mathematical functions and graphs.</p>
+                    <span>Explore Graphs →</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- CALCULATOR -->
+        <section class="content-section" id="calculator">
+
+            <div class="section-heading">
+                <div>
+                    <span class="tag">CALCULATION CENTER</span>
+                    <h2>Scientific Calculator</h2>
+                    <p>Advanced mathematical calculations in one place.</p>
+                </div>
+            </div>
+
+            <div class="calculator-placeholder">
+                <div class="calculator-top">
+                    <span>AM SCIENTIFIC</span>
+                    <span>DEG | RAD</span>
+                </div>
+
+                <div class="calculator-screen">
+                    <span>Ready to calculate</span>
+                    <h2>0</h2>
+                </div>
+
+                <div class="calculator-message">
+                    <div class="card-icon">⌗</div>
+                    <h3>Scientific Calculator</h3>
+                    <p>
+                        Our advanced calculation engine is coming
+                        in the next development stage.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- AI SOLVER -->
+        <section class="content-section" id="ai-solver">
+
+            <div class="section-heading">
+                <div>
+                    <span class="tag">INTELLIGENT LEARNING</span>
+                    <h2>AI Problem Solver</h2>
+                    <p>Understand the problem, not just the answer.</p>
+                </div>
+            </div>
+
+            <div class="ai-panel">
+
+                <div class="ai-heading">
+                    <div class="card-icon">✦</div>
+                    <div>
+                        <h3>Ask AM AI</h3>
+                        <p>Your scientific learning assistant.</p>
+                    </div>
+                </div>
+
+                <textarea
+                    id="questionInput"
+                    placeholder="Enter or paste your mathematics, physics, chemistry or other question here..."
+                ></textarea>
+
+                <div class="upload-area">
+                    <label for="fileInput" class="upload-btn">
+                        ＋ Upload Image or PDF
+                    </label>
+
+                    <input
+                        type="file"
+                        id="fileInput"
+                        accept="image/*,.pdf"
+                        multiple
+                        hidden
+                    >
+
+                    <span id="fileName">No files selected</span>
+                </div>
+
+                <button class="primary-btn" id="solveBtn">
+                    Solve Problem →
+                </button>
+
+                <div id="aiMessage" class="message"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SUBJECTS -->
+        <section class="content-section" id="subjects">
+
+            <div class="section-heading">
+                <div>
+                    <span class="tag">LEARN ANYTHING</span>
+                    <h2>Explore Subjects</h2>
+                    <p>Scientific problem solving across different subjects.</p>
+                </div>
+            </div>
+
+            <div class="subject-grid">
+
+                <div class="subject-card">
+                    <span>∑</span>
+                    <h3>Mathematics</h3>
+                    <p>Algebra, calculus, geometry and statistics.</p>
+                </div>
+
+                <div class="subject-card">
+                    <span>⚛</span>
+                    <h3>Physics</h3>
+                    <p>Mechanics, electricity, energy and waves.</p>
+                </div>
+
+                <div class="subject-card">
+                    <span>⚗</span>
+                    <h3>Chemistry</h3>
+                    <p>Equations, reactions, moles and calculations.</p>
+                </div>
+
+                <div class="subject-card">
+                    <span>♧</span>
+                    <h3>Biology</h3>
+                    <p>Genetics, cells and biological calculations.</p>
+                </div>
+
+                <div class="subject-card">
+                    <span>▤</span>
+                    <h3>Accounting</h3>
+                    <p>Financial mathematics and accounting calculations.</p>
+                </div>
+
+                <div class="subject-card">
+                    <span>◈</span>
+                    <h3>Economics</h3>
+                    <p>Elasticity, costs and economic calculations.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TOOLS -->
+        <section class="content-section" id="tools">
+
+            <div class="section-heading">
+                <div>
+                    <span class="tag">MORE FEATURES</span>
+                    <h2>Scientific Tools</h2>
+                </div>
+            </div>
+
+            <div class="tools-list">
+                <div>📈 <span>Graph Plotter</span></div>
+                <div>📚 <span>Formula Library</span></div>
+                <div>📜 <span>Calculation History</span></div>
+                <div>🔄 <span>Unit Converter</span></div>
+                <div>⚛ <span>Periodic Table</span></div>
+                <div>🧮 <span>Statistics Tools</span></div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="brand">
+            <div class="brand-logo">AM</div>
+            <div>
+                <h2>AM Scientific Calculator</h2>
+                <small>BY ALEX MEJA</small>
+            </div>
+        </div>
+
+        <p>Calculate. Solve. Understand. Learn.</p>
+
+        <p>© 2026 AM Scientific Calculator. All rights reserved.</p>
+    </footer>
+
+
+    <script src="js/app.js"></script>
 
 </body>
-
 </html>
